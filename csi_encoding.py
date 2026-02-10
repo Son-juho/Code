@@ -8,8 +8,8 @@ import torch.nn as nn
 import torch.optim as optim
 import os
 
-TOTAL_TEST_SYMBOLS = 200000  # 원하는 심볼 개수
-VIZ_SNR_TARGET = 20          # 성상도 확인 목표 SNR (dB)
+TOTAL_TEST_SYMBOLS = 200000  
+VIZ_SNR_TARGET = 20          
 
 def map_weights_to_conductance_linear(weights_matrix, g_min, g_max, num_states, non_linearity, max_weight_for_scaling):
     if num_states <= 1: return np.full_like(weights_matrix, g_min)
